@@ -13,12 +13,20 @@ This project automates UI testing using **CodeceptJS** with:
 
 You can run specific test groups with the following commands:
 
-| Command                  | Description                                 |
-| ------------------------ | ------------------------------------------- |
-| `npm run testLiveStream` | Run tests for the Live Stream page          |
-| `npm run testMostRead`   | Run tests for the Most Read section         |
-| `npm run test:Mobile`    | Run tests emulating mobile view (TEST_MODE) |
+| Command           | Description                                 |
+|-------------------| ------------------------------------------- |
+| `test։LiveStream` | Run tests for the Live Stream page          |
+| `test։MostRead`   | Run tests for the Most Read section         |
+| `test:Mobile`     | Run tests emulating mobile view (TEST_MODE) |
 
+### 📱 Running Mobile Tests
+
+To run mobile-specific tests, use:
+
+```bash
+npm run test:Mobile
+```
+This command sets the environment variable TEST_MODE=mobile, which is then used in the CodeceptJS config file (codecept.conf.js) to apply mobile settings (like using mobile emulation).
 ### 🧪 Running in Headless Mode
 
 To run any of the above tests without opening a browser window, prepend `HEADLESS=true`(as shown in test:headless):
@@ -41,13 +49,19 @@ allure serve output
 
 ```
 project-root/
+├── features/                      
+│   ├── liveStream.feature
+│   ├── mobileTest.feature
+│   ├── mostRead.feature
+├── helpers/                    # Shared helpers
+│   └── navigationHelper.js     # Reusable navigation logic
 ├── pages/                      # Page Object Model (POM) files
 │   ├── homePage.js
 │   ├── livePage.js
-├── helpers/                    # Shared helpers
-│   └── navigationHelper.js     # Reusable navigation logic
+├── step_definitions/           # CodeceptJS step definitions          
+│   ├── steps.js
 ├── output/                     # Allure results (auto-generated)
-├── steps.d.ts / steps_file.js # CodeceptJS step definitions
+├── steps_file.js 
 ├── codecept.conf.js            # CodeceptJS config
 ├── package.json
 ├── README.md                   # You're here!

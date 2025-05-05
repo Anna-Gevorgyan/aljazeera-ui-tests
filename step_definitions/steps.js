@@ -24,7 +24,8 @@ Then('I should see the {string} section', async (section) => {
         throw new Error(`Section "${section}" is not recognized.`);
     }
     console.log(`Checking visibility of selector: ${sectionSelector}`);
-    I.seeElement(sectionSelector);
+    await I.waitForElement(sectionSelector,5)
+    await I.seeElement(sectionSelector);
     console.log(`Result: "${section}" section is visible`);
 });
 
@@ -113,7 +114,7 @@ Then('I should see the {string}', async (elementName) => {
         throw new Error(`Element "${elementName}" is not recognized.`);
     }
     console.log(`Checking if the element ${elementName} is visible on the page.`);
-
+    await I.waitForElement(elementSelector, 5);
     await I.seeElement(elementSelector);
 
     console.log(`Element ${elementName} is visible on the page.`);
