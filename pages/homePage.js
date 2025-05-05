@@ -17,7 +17,7 @@ module.exports = {
 
     async activateBypassMenu() {
         console.log('Clicking bypass link...');
-        await I.waitForElement(this.bypassLink,5)
+        await I.waitForElement(this.bypassLink, 5)
         await I.forceClick(this.bypassLink);
         console.log('Bypass link clicked.');
     }
