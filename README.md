@@ -21,7 +21,7 @@ You can run specific test groups with the following commands:
 
 ### 🧪 Running in Headless Mode
 
-To run any of the above tests without opening a browser window, prepend `HEADLESS=true`(as shown in test:headless):
+To run any of the above tests without opening a browser window, prepend `HEADLESS=true`(as shown in test:headless)
 
 ---
 
