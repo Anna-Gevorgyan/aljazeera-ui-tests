@@ -11,7 +11,7 @@ This project automates UI testing using **CodeceptJS** with:
 
 ## 🚀 Running Tests
 
-You can run specific test groups with the following commands:
+You can run specific test groups with the following commands from package.json:
 
 | Command           | Description                                 |
 |-------------------| ------------------------------------------- |
