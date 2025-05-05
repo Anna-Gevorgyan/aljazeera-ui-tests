@@ -24,7 +24,7 @@ You can run specific test groups with the following commands:
 To run mobile-specific tests, use:
 
 ```bash
-npm run test:Mobile
+test:Mobile
 ```
 This command sets the environment variable TEST_MODE=mobile, which is then used in the CodeceptJS config file (codecept.conf.js) to apply mobile settings (like using mobile emulation).
 ### 🧪 Running in Headless Mode
