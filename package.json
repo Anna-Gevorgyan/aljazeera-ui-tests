@@ -1,0 +1,22 @@
+{
+  "name": "aljazeera-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "testLiveStream": "npx codeceptjs run --steps -p pauseOnFail --grep liveStream --verbose --plugins allure",
+    "testMostRead": "npx codeceptjs run --steps -p pauseOnFail --grep mostRead --verbose --plugins allure",
+    "test:Mobile": "cross-env TEST_MODE=mobile npx codeceptjs run --steps -p pauseOnFail --grep mobile --verbose --plugins allure",
+    "test:headless": "cross-env TEST_MODE=mobile HEADLESS=true npx codeceptjs run --grep @mobile"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@codeceptjs/allure-legacy": "^1.0.2",
+    "chai": "^5.2.0",
+    "codeceptjs": "^3.7.3",
+    "cross-env": "^7.0.3",
+    "webdriverio": "^9.12.7"
+  }
+}

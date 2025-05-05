@@ -1,0 +1,14 @@
+# Node dependencies
+node_modules/
+
+# Test reports
+output/
+allure-report/
+allure-results/
+
+# IDE files
+.idea/
+
+# Logs and temp files
+*.log
+.DS_Store
